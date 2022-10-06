@@ -1,0 +1,4 @@
+<select #paisNombre (change)="this.EnviarPais(paisNombre.value)">
+    <option default value="Selecciona un pais"></option>
+    <option *ngFor="let pais of this.servicioPaises.paises;" value="{{pais.nombre}}">{{pais.nombre}}</option>
+</select>

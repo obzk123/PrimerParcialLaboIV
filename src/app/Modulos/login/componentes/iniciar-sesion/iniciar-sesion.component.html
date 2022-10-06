@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <body class="text-center">
+        <form class="form-signin">
+          <img class="mb-4" src="https://getbootstrap.com/docs/4.0/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
+
+          <h1 class="h3 mb-3 font-weight-normal">Inicio de sesion</h1>
+
+          <label for="inputEmail" class="sr-only">Email address</label>
+          <input type="email" name="inputEmail" class="form-control" placeholder="Correo electronico" required autofocus [(ngModel)]="this.username">
+          <label for="inputPassword" class="sr-only">Password</label>
+          <input type="password" name="inputPassword" class="form-control" placeholder="Contraseña" required [(ngModel)]="this.password" autocomplete>
+          <label *ngIf="this.error == true" style="color: red;">Error al iniciar sesion.</label>
+          <br>
+          <select #opcion (change)="this.cargarUsuario(opcion.value)">
+            <option>Seleccione una opcion</option>
+            <option value="1">Usuario 1</option>
+            <option value="2">Usuario 2</option>
+          </select>
+          <br><br>
+          <button class="btn btn-lg btn-primary btn-block" type="button" (click)="this.IniciarSesion()">Iniciar sesion</button>
+          <p class="mt-5 mb-3 text-muted">&copy; Octavio Bill Zito</p>
+        </form>
+      </body>
+</html>
+    

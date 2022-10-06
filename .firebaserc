@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "parciallaboiv-7a627": {
+      "hosting": {
+        "primerparciallaboiv": [
+          "parciallaboiv-7a627"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "parciallaboiv-7a627"
+  }
+}

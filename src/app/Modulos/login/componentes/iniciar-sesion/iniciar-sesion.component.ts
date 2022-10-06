@@ -27,7 +27,7 @@ export class IniciarSesionComponent implements OnInit {
   {
     this.AuthService.IniciarSesion(this.username, this.password).then(credencialesUsuario =>
       {
-        this.router.navigate(['/productos']);
+        this.router.navigate(['/home']);
       }).catch(error=>
         {
           this.error = true;

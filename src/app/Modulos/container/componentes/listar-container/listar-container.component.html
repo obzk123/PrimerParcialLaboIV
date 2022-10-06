@@ -1,0 +1,28 @@
+
+<input type="button" value="Alta container" (click)="this.CambiarVista('alta')">
+<input type="button" value="Volver al home" [routerLink]="['/home']">
+<ng-container *ngIf="this.vistaListar == true">
+    <h1>Listado de containers</h1>
+    <table>
+        <tr>
+            <th>Codigo</th>
+            <th>Color</th>
+            <th>Empresa</th>
+            <th>Capacidad</th>
+        </tr>
+
+        <tr *ngFor="let i of this.servicioContainer.containers" (click)="this.SeleccionarContainer(i)" (click)="this.CambiarVista('modificar')" >
+            <td>{{i.codigo}}</td>
+            <td>{{i.color}}</td>
+            <td>{{i.empresa}}</td>
+            <td>{{i.capacidad}}</td>
+            <td><input type="button" value="Eliminar" (click)="this.SeleccionarContainer(i)" (click)="this.CambiarVista('eliminar')" ></td>
+        </tr>
+
+    </table>
+</ng-container>
+
+
+<app-alta-conteiner      *ngIf="this.vistaAlta == true" (enviarEvento)="this.CambiarVista($event)" (enviarContainer)="this.AltaContainer($event)"></app-alta-conteiner>
+<app-modificar-container *ngIf="this.vistaModificar == true" [container]="this.containerSeleccionado" (enviarEvento)="this.CambiarVista($event)"></app-modificar-container>
+<app-eliminar-container  *ngIf="this.vistaEliminar == true"  [container]="this.containerSeleccionado" (enviarEvento)="this.CambiarVista($event)"></app-eliminar-container>

@@ -9,11 +9,14 @@ import { environment } from '../environments/environment';
 import { provideAuth,getAuth } from '@angular/fire/auth';
 import { PaisService } from './Servicios/pais.service';
 import { ProductoService } from './Servicios/producto.service';
+import { HomeComponent } from './Componentes/home/home.component';
+import { ContainerService } from './Servicios/container.service';
 
 @NgModule({
   declarations: [
     AppComponent,
-    BienvenidaComponent
+    BienvenidaComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -26,6 +29,6 @@ import { ProductoService } from './Servicios/producto.service';
   bootstrap: [AppComponent]
 })
 export class AppModule { 
-  constructor(private servicioPaises:PaisService, private servicioProductos:ProductoService){}
+  constructor(private servicioPaises:PaisService, private servicioProductos:ProductoService, private containerService:ContainerService){}
 }
 

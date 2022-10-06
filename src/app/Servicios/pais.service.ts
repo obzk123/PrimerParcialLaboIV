@@ -30,8 +30,9 @@ export class PaisService {
       });
     })
 
-    this.ServicioProductos.productos.push(Producto.AgregarProducto(0, "Television", 8000, 15, this.paises[0], false));
-    this.ServicioProductos.productos.push(Producto.AgregarProducto(1, "Consola", 12000, 8, this.paises[1], false));
-    this.ServicioProductos.productos.push(Producto.AgregarProducto(2, "Computadora", 25000, 20, this.paises[2], false));
+    this.ServicioProductos.productos.push(Producto.AgregarProducto(0, "Television", 8000, 14, this.paises[0], false));
+    this.ServicioProductos.productos.push(Producto.AgregarProducto(1, "Consola", 12000, 15, this.paises[1], false));
+    this.ServicioProductos.productos.push(Producto.AgregarProducto(2, "Pizza", 1000, 0, this.paises[2], true));
+    this.ServicioProductos.productos.push(Producto.AgregarProducto(3, "Computadora", 25000, 20, this.paises[3], false));
   }
 }

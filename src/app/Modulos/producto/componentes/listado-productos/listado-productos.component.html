@@ -1,0 +1,12 @@
+<h1>Listado de productos para el publico o usuarios</h1>
+<table>
+    <tr>
+        <th>Codigo</th>
+        <th>Descripcion</th>
+    </tr>
+    <tr *ngFor="let i of this.ServicioProducto.productos;" (click)="this.EnviarProducto(i)">
+        <td>{{i.codigo}}</td>
+        <td>{{i.descripcion}}</td>
+    </tr>
+</table>
+<h4>Solo se muestran los productos que tiene stock</h4>
